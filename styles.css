@@ -1,0 +1,96 @@
+* {
+  font-family: sans-serif;
+}
+
+#amt, #happinessamt, #universeamt {
+  text-align: center;
+  font-size: 35px;
+}
+
+#elvestier {
+  text-align: left;
+  width: 33%;
+}
+
+#elvesamt1, #elvesamt2, #elvesamt3, #elvesamt4, #elvesamt5, #elvesamt6 {
+  text-align: center;
+  width: 33%;
+}
+
+#buy1, #buy2, #buy3, #buy4, #buy5, #buy6 {
+  text-align: center;
+  margin: auto;
+  display: block;
+  float: right;
+  width: 125px;
+  height: 25px;
+  border-radius: 0%;
+  outline: none;
+}
+
+#tabbtn, .tabbtn {
+  display: inline-block;
+  width: 125px;
+  height: 25px;
+  border-radius: 0%;
+  outline: none;
+  margin: 0 auto;
+}
+
+#universe, #uex {
+  display: none;
+}
+
+#tabs {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 25px;
+}
+
+#production, #happiness, #universemenu, #uexmenu, #options {
+  width: 100%;
+}
+
+#happiness, #universemenu, #uexmenu, #options {
+  display: none;
+}
+
+#notunlocked, #unlocked {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#ptoh {
+  display: inline-block;
+  width: 200px;
+  height: 25px;
+  border-radius: 0%;
+  outline: none;
+  margin: 0 auto;
+}
+
+#optionsbtn, .optionsbtn {
+  text-align: center;
+  border-radius: 0%;
+  outline: none;
+  margin: 0 auto;
+  display: inline-block;
+  width: 200px !important;
+  height: 100px;
+  vertical-align: middle;
+}
+
+#optionsitem {
+  text-align: center;
+  height: 100px;
+}
+
+#optionsrow {
+  width: 100%;
+}
+
+#optionspanel {
+  width: 100%;
+}
