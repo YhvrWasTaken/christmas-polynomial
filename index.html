@@ -9,7 +9,7 @@
     <link rel=icon href=favicon.png>
   </head>
   <body>
-    <p id="amt">You have <b>10</b> Presents.</p>
+    <p id="amt">You have <b>50</b> Presents.</p>
     <div id="tabs">
       <button onclick="changeMenu('production')" id="tabbtn">
         Production
@@ -28,7 +28,12 @@
       </button>
     </div>
     <div id="production">
-      <div id="tabs" style="margin-top: 5px;">  <!-- Not really :P -->
+      <div id="tabs" style="margin-top: 5px;">
+        <button onclick="pMult()" id="pMult" class="tabbtn" style="width: 200px;">
+          2x Presents - 100 Presents
+        </button>
+      </div>
+      <div id="tabs" style="margin-top: 5px;">
         <button onclick="maxAll()" id="tabbtn">
           Max All (M)
         </button>
@@ -82,7 +87,7 @@
         <p id="happinessamt">You have <b>0</b> Happiness.</p>
 
         <button id="ptoh" onclick="happinessTrade()">1.0e+16 Presents -> 1 Happiness</button>
-        <button id="ptoh" onclick="maxHappinessTrade()">Max Presents -> Max Happiness</button>
+        <button id="mptoh" onclick="maxHappinessTrade()">Max Presents -> Max Happiness</button>
 
         <table id="optionspanel">
           <tbody>
@@ -110,14 +115,14 @@
               <button id="universeupgrade1" class="optionsbtn" onclick="uu.u1()">2.5x NanoElves Production<br>1 UP</button>
               <button id="universeupgrade7" class="optionsbtn" onclick="uu.u7()">Start with 10 Happiness<br>1 UP</button>
               <button id="universeupgrade8" class="optionsbtn" onclick="uu.u8()">1.1x Multiplier to all Elves for each Universe<br>2 UP</button>
-              <button id="universeupgrade3" class="optionsbtn" onclick="uu.u3()">Apply a multiplier (sqrt of sqrt of presents) to GigaElves<br>15 UP</button>
+              <button id="universeupgrade3" class="optionsbtn" onclick="uu.u3()">Apply a multiplier (sqrt of sqrt of presents) to GigaElves, Max of 5x<br>15 UP</button>
             </td>
           </tr>
           <tr id="optionsrow">
             <td id="optionsitem">
-              <button id="universeupgrade5" class="optionsbtn" onclick="uu.u5()">sqrt NanoElves Multiplier effects MicroElves<br>1 UP</button>
+              <button id="universeupgrade5" class="optionsbtn" onclick="uu.u5()">Start with 1 NanoElf<br>1 UP</button>
               <button id="universeupgrade6" class="optionsbtn" onclick="uu.u6()">Start with 1.0e+16 Presents<br>2 UP</button>
-              <button id="universeupgrade9" class="optionsbtn" onclick="uu.u9()">Start 1 ∞Elf<br>4 UP</button>
+              <button id="universeupgrade9" class="optionsbtn" onclick="uu.u9()">Start 1 MicroElf<br>4 UP</button>
               <button id="universeupgrade2" class="optionsbtn" onclick="uu.u2()">25 Happiness/sec<br>25 UP</button>
             </td>
           </tr>
@@ -134,12 +139,11 @@
 
     <div id="uexmenu">
 
-      <p id="universeamt">You have <b>1</b> Universe Points.</p>
-
       <table id="optionspanel">
         <tbody>
           <tr id="optionsrow">
             <td id="optionsitem" style="vertical-align:top;" align="center">
+              <button id="universeduringexp" class="optionsbtn" onclick="universe()"><b>Universe For 1 UP.</b></button>
               <button id="toggleexp" class="optionsbtn" onclick="toggleExploring()"><b>Toggle Exploration</b></button>
             </td>
           </tr>
@@ -153,13 +157,19 @@
         <tbody>
           <tr id="optionsrow">
             <td id="optionsitem">
+              <button id="optionsbtn" onclick="save()">Manual Save</button>
+              <button id="optionsbtn" onclick="load()">Manual Load</button>
+            </td>
+          </tr>
+          <tr id="optionsrow">
+            <td id="optionsitem">
               <button id="optionsbtn" onclick="changeTheme()">Change Theme</button>
             </td>
           </tr>
         </tbody>
       </table>
       <footer style="text-align: center; font-size: 11px;">Hotkeys:</footer>
-      <footer style="text-align: center; font-size: 10px;">M: Max all, 1-6: Single buy elves</footer>
+      <footer style="text-align: center; font-size: 10px;">M: Max all, 1-6: Single buy elves, P: Single buy Present Multiplier</footer>
       <footer style="text-align: center; font-size: 9px;">Made with <3 And inspired by Antimatter Dimensions</footer>
     </div>
 
@@ -167,5 +177,6 @@
 
     <script src="break_infinity.min.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
+
   </body>
 </html>
