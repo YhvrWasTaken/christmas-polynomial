@@ -4,3 +4,7 @@
   border-color: #ffffff;
   color: #ffffff;
 }
+
+#amt, #happinessamt, #universeamt {
+ text-shadow: 0px 0px 0px black, 0 0 1em black, 0 0 0.2em black;
+}
