@@ -7,6 +7,12 @@
   font-size: 35px;
 }
 
+#presentmulbtn {
+  width: 200px;
+  height: 25px;
+  overflow: hidden;
+}
+
 #elvestier {
   text-align: left;
   width: 33%;
@@ -62,7 +68,7 @@
   margin-top: 10px;
 }
 
-#ptoh {
+#ptoh, #mptoh {
   display: inline-block;
   width: 200px;
   height: 25px;
