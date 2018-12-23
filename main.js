@@ -368,7 +368,7 @@ function happinessupgrade(upgrade) {
 
 function universe() {
   if (player.universeExploring) {
-    alert("Endgame has been reached. Thank you for playing!")
+    alert("You broke it, damnit.")
   } else if (player.presents.greaterThanOrEqualTo(1e308)) {
     reset.presents()
     reset.elves()
@@ -587,10 +587,6 @@ function calculateGain(x) {
   }
 }
 
-function calcUPGain() {
-  return(player.presents.div(1e500))
-}
-
 function save() {
   localStorage.setItem("xmasSave", JSON.stringify(player)); //I have no clue what the fuck this does I copied the code from AD
 }
@@ -629,10 +625,6 @@ window.setInterval(function() {
   }
   player.happiness.add((player.universeUpgrades.u2 ? 25 : 0))
   document.getElementById("happinessamt").innerHTML = "You have <b>" + player.happiness + "</b> Happiness."
-  if (player.universeExploring) {
-    document.getElementById("universeduringexp").innerHTML = "Universe For " + calcUPGain() + " UP."
-    calcUPGain()
-  }
 }, 1000)
 
 window.setInterval(save(), 30000)
